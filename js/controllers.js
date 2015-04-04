@@ -1,11 +1,5 @@
 app
 
-.controller('MainCtrl', ['$scope', function($scope) {
-	$scope.toggleMain = function() {
-		$('#intro').slideToggle();
-	};
-}])
-
 .controller('HomeCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
 	PoliticsService.list(function(response) {
 		$scope.constituencies = response;

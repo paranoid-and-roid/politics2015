@@ -6,9 +6,16 @@ var app = angular.module('politicsApp', ['ui.router', 'ui'])
 	
 	$stateProvider
 		.state('home', {
-			url: '/home',
-			templateUrl: 'templates/home.html',
-			controller: 'HomeCtrl'				
+			url: '/home',			
+			views: {
+				'': {
+					templateUrl: 'templates/home.html',
+					controller: 'HomeCtrl'
+				},
+				'main@home': {
+					templateUrl: 'templates/home.main.html'
+				},
+			}				
 		})
 		.state('home.detail', {
 			url: '/:constituencyName',
