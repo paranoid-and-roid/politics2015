@@ -1,0 +1,19 @@
+<h2>{{ constituency.constituency_name }}</h2>
+
+<div class = "inner">
+    <div class = "image">
+        <img src = "{{constituency.image}}" alt = "{{constituency.tdName}}" />
+    </div>
+    <dl>
+        <dt><strong>{{constituency.tdName}}</strong></dt>
+        <dd>
+            <strong>Political Party:</strong> {{constituency.party}}
+        </dd>
+        <dd>
+            <strong>Votes Received on First Count:</strong> {{constituency.firstCount}}
+        </dd>
+        <dd>
+            <strong>Elected on:</strong> {{constituency.whenElected}}
+        </dd>
+    </dl>
+</div>
