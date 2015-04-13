@@ -1,19 +1,19 @@
 <h2>{{ constituency.constituency_name }}</h2>
 
-<div class = "inner">
+<div class = "inner" ng-repeat="detail in constituency.details">
     <div class = "image">
-        <img src = "{{constituency.image}}" alt = "{{constituency.tdName}}" />
+        <img ng-src = "{{detail.image}}" alt = "{{detail.tdName}}" />
     </div>
     <dl>
-        <dt><strong>{{constituency.tdName}}</strong></dt>
+        <dt><strong>{{detail.tdName}}</strong></dt>
         <dd>
-            <strong>Political Party:</strong> {{constituency.party}}
+            <strong>Political Party:</strong> {{detail.party}}
         </dd>
         <dd>
-            <strong>Votes Received on First Count:</strong> {{constituency.firstCount}}
+            <strong>Votes Received on First Count:</strong> {{detail.firstCount}}
         </dd>
         <dd>
-            <strong>Elected on:</strong> {{constituency.whenElected}}
+            <strong>Elected on:</strong> {{detail.whenElected}}
         </dd>
     </dl>
 </div>

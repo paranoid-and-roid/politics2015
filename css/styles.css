@@ -24,6 +24,7 @@ header {
 }
 
 h2 {
+	font-size: 200%;
     text-align: center;
 }
 
@@ -122,9 +123,21 @@ dt strong{
     margin: 40px auto;
     background: #f2eaff;
     border: 2px solid #1f38c4;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 30px;
     padding-top: 0;
+}
+
+fieldset {
+	margin-bottom: 80px;
+	border: 2px solid #f2eacc;
+	border-radius: 4px;
+}
+
+legend {
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 20px;
 }
 
 .image {
@@ -206,11 +219,16 @@ th, td {
     float: left;
     margin: 40px 0;
 }
-#intro p {
+#intro p, #main p {
     font-size: 20px;
     text-align: center;
     font-family: Calibri, "Times New Roman", sans-serif;
     padding: 0 10%;
+}
+
+#main {
+	width: 100%;
+	margin-top: 0;
 }
 .upper_image {
     width: 300px;

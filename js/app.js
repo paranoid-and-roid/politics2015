@@ -1,4 +1,4 @@
-var app = angular.module('politicsApp', ['ui.router', 'ui'])
+var politicsApp = angular.module('politicsApp', ['ui.router', 'ui', 'ngAnimate'])
 
 .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {	
 	
@@ -18,7 +18,7 @@ var app = angular.module('politicsApp', ['ui.router', 'ui'])
 			}				
 		})
 		.state('home.detail', {
-			url: '/:constituencyName',
+			url: '/{constituencyName}',
 			templateUrl: 'templates/home.detail.html',
 			controller: 'DetailCtrl'
 		})
@@ -31,6 +31,5 @@ var app = angular.module('politicsApp', ['ui.router', 'ui'])
 			url: '/game',
 			templateUrl: 'templates/game.html',
 			controller: 'GameCtrl'
-		});
-		
+		});		
 }]);

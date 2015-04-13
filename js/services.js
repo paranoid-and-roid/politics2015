@@ -1,4 +1,4 @@
-app
+politicsApp
 
 .factory('PoliticsService', function($http) {
 	var cachedData;
@@ -13,7 +13,7 @@ app
 			});
 		}
 	}
-	
+	 
 	return {
 		list: listData,
 		detail: function(constituency_name, callback) {
@@ -26,6 +26,3 @@ app
 		}
 	};
 });
-
-
-
