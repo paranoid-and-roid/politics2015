@@ -1,4 +1,4 @@
-var politicsApp = angular.module('politicsApp', ['ui.router', 'ngAnimate'])
+var politicsApp = angular.module('politicsApp', ['ui.router'])
 
 .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {	
 	
