@@ -1,19 +1,24 @@
-<h2>{{ constituency.constituency_name }}</h2>
-
-<div class = "inner" ng-repeat="detail in constituency.details">
-    <div class = "image">
-        <img ng-src = "{{detail.image}}" alt = "{{detail.tdName}}" />
-    </div>
-    <dl>
-        <dt><strong>{{detail.tdName}}</strong></dt>
-        <dd>
-            <strong>Political Party:</strong> {{detail.party}}
-        </dd>
-        <dd>
-            <strong>First Preferences:</strong> {{detail.firstCount}}
-        </dd>
-        <dd>
-            <strong>Elected on:</strong> {{detail.whenElected}}
-        </dd>
-    </dl>
+<fieldset>
+	<legend>{{ constituency.constituency_name }}</legend>
+	
+	<div class = "inner" ng-repeat="detail in constituency.details">
+		<h3>{{detail.tdName}}</h3>
+	    <div class = "image">
+	        <img ng-src = "{{detail.image}}" alt = "{{detail.tdName}}" />
+	    </div>
+	    <table>
+	    	<tr>
+	    		<td>Political Party:</td>
+	    		<td>{{detail.party}}</td>
+	    	</tr>
+	    	<tr>
+	    		<td>First Preferences:</td>
+	    		<td>{{detail.firstCount | number}}</td>
+	    	</tr>
+	    	<tr>
+	    		<td>Elected on:</td>
+	    		<td>{{detail.whenElected}}</td>
+	    	</tr>
+	    </table>
+	</fieldset>
 </div>

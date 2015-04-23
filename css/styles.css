@@ -23,9 +23,13 @@ header {
     margin-bottom: 40px;
 }
 
-h2 {
+h2, h3 {
 	font-size: 200%;
     text-align: center;
+}
+
+h2 {
+	padding-top: 20px;
 }
 
 li {
@@ -69,7 +73,7 @@ a {
 #sidebar, #game_sidebar {
     float: left;
     width: 25%;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 #game_sidebar {
     padding-left: 40px;
@@ -91,7 +95,7 @@ a {
     float: left;
     margin: 20px auto;
 }
-
+/*
 dl {
     margin-top: 40px;
 }
@@ -103,6 +107,7 @@ dt, dd {
 dt strong{
     font-size: 40px;
 }
+*/
 #list {
     width: 80%;
     text-align: center;
@@ -129,13 +134,15 @@ dt strong{
 }
 
 fieldset {
-	margin-bottom: 80px;
-	border: 2px solid #f2eacc;
+	margin: 10px 0 80px;
+	background: #f2eaff;
+	border: 0;
 	border-radius: 4px;
 }
 
 legend {
 	font-size: 30px;
+	color: #114;
 	font-weight: bold;
 	padding-left: 20px;
 }
@@ -180,9 +187,13 @@ img {
     border-collapse: collapse;
 }
 
+td:first-child {
+	font-weight: bold;
+}
+
 th, td {
-    border: 1px solid #1f38c4;
-    padding: 5px;
+    
+    padding: 25px;
 }
 
 #center {
@@ -217,7 +228,8 @@ th, td {
 #intro {
     width: 71%;
     float: left;
-    margin: 40px 0;
+    margin: 5px 0;
+    color: #114;
 }
 #intro p, #main p {
     font-size: 20px;
