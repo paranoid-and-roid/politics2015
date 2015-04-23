@@ -19,8 +19,6 @@ politicsApp
 	PoliticsService.detail($stateParams.constituencyName, function(response) {
 		$scope.constituency = response;
 	});
-	
-
 }])
 
 .controller('GameCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
