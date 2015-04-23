@@ -36,13 +36,8 @@
             <div id = "image"><img id = "mugShot" src = "" alt = "" /></div>
             <div id = "tdName"><p></p></div><br>
 
-            <select id = "cons">
-                <option>Constituencies</option>
-                <option>Cork East</option>
-                <option>Cork North Central</option>
-                <option>Cork North West</option>
-                <option>Cork South Central</option>
-                <option>Cork South West</option>
+            <select id = "cons" ng-model="selectedItem" ng-options="constituency.constituency_name for constituency in constituencies">
+                <option value="">-- Constituency --</option>
             </select>
 
             <select id = "parties">
