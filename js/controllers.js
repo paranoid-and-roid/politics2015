@@ -86,7 +86,7 @@ $scope.playGame = function() {
 
     var d, e;
     //This function checks that the option selected from each menu matches the correct details for each TD.
-    var choice = function() {
+    $scope.choice = function() {
         var a = document.getElementById("parties").selectedIndex;
         var b = document.getElementById("cons").selectedIndex;
         c = document.getElementById("parties");
@@ -94,10 +94,10 @@ $scope.playGame = function() {
         e = c.getElementsByTagName("option")[a].text;
         f = d.getElementsByTagName("option")[b].text;
         //If the details are correct, the player scores points
-        if(e == data.constituencies[num1].details[num2].party) {
+        if(e == $scope.constituencies[num1].details[num2].party) {
             score = score + 10 + (seconds / 2);
         }
-        if(f == data.constituencies[num1].constituency_name) {
+        if(f == $scope.constituencies[num1].constituency_name) {
             score = score + 10 + (seconds / 2);
         }
         $("#keepScore").html(score); //The points are stored here.
@@ -109,7 +109,7 @@ $scope.playGame = function() {
 
     };
     chooseRandom();
-    $("#submit").on("click", choice);
+    
     //This is the end of the game
 };
 });
