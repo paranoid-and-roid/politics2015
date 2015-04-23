@@ -111,6 +111,6 @@ $scope.playGame = function() {
     chooseRandom();
     
     //This is the end of the game
-};
-});
+	};
+	});
 }]);
