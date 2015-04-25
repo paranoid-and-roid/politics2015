@@ -2,14 +2,14 @@
   "name": "template_express_angular",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "^1.12.2",
     "express": "^4.12.3",
     "grunt": "^0.4.5",
@@ -17,5 +17,6 @@
     "grunt-express": "^1.4.1",
     "grunt-open": "^0.2.3",
     "matchdep": "^0.3.0"
-  }
+    },
+  "devDependencies": {}
 }
