@@ -78,12 +78,9 @@ $scope.playGame = function() {
     var chooseRandom = function() {
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
-        //Find the image
-        var aMugShot = document.getElementById("mugShot");
-        var mug = aMugShot.setAttribute("src", ($scope.constituencies[num1].details[num2].image));
-
-        $("#image").html(mug);
-        $("#tdName").html($scope.constituencies[num1].details[num2].tdName);
+     
+        $scope.face = $scope.constituencies[num1].details[num2].image;        
+        $scope.name = $scope.constituencies[num1].details[num2].tdName;
     };
 
     var d, e;
