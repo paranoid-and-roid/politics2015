@@ -2,20 +2,17 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 
 .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {	
 	
-	$urlRouterProvider.otherwise('/home');
+	$urlRouterProvider.otherwise('/');
 	
 	$stateProvider
 		.state('home', {
-			url: '/home',			
-			views: {
-				'': {
-					templateUrl: 'templates/home.html',
-					controller: 'HomeCtrl'
-				},
-				'main@home': {
-					templateUrl: 'templates/home.main.html'
-				},
-			}				
+			abstract: true,		
+			templateUrl: 'templates/home.html',
+			controller: 'HomeCtrl'
+		})
+		.state('home.main', {
+			url: '/',
+			templateUrl: 'templates/home.main.html'			
 		})
 		.state('home.detail', {
 			url: '/{constituencyName}',

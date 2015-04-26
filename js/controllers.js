@@ -75,8 +75,6 @@ playGame = function() {
      		// Use the random numbers to generate a random politician
         $scope.face = $scope.constituencies[num1].details[num2].image;        
         $scope.name = $scope.constituencies[num1].details[num2].tdName;
-        
-       // $scope.party = $scope.constituencies[num1].details[num2].party;
     };
 
     var d, e;
@@ -84,7 +82,7 @@ playGame = function() {
     $scope.choice = function() {
     	
     	$scope.selectedConstituency="-- Constituency --";
-    	$scope.selectedParty = "-- Party --";
+    	$scope.selectedParty = "-- Political Party --";
     	
         var a = document.getElementById("parties").selectedIndex;
         var b = document.getElementById("cons").selectedIndex;
