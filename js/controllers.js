@@ -28,15 +28,8 @@ politicsApp
 $scope.score = 0;
 var seconds = 200;
 
+playGame = function() {
 
-
-$scope.playGame = function() {
-    //The game begins with the appearance on the page of the central panel, which contains the image and the select boxes
-       
-    $("#game_sidebar img").slideUp();
-    $("#intro").slideUp(); 
-    $("#scores").css("visibility", "visible");
-    $("#centre").slideDown();
     var counter=setInterval(timer, 1000);
 
     function timer() {
@@ -117,5 +110,9 @@ $scope.playGame = function() {
     
     //This is the end of the game
 	};
+	$scope.$on('$viewContentLoaded', function() {
+	    playGame();
+	});
   });
+	 
 }]);

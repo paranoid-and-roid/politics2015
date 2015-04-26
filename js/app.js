@@ -29,7 +29,11 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 		})
 		.state('game', {
 			url: '/game',
-			templateUrl: 'templates/game.html',
+			templateUrl: 'templates/game.html'
+		})
+		.state('play', {
+			url: '/play',
+			templateUrl: 'templates/play.html',
 			controller: 'GameCtrl'
-		});		
+		});
 }]);

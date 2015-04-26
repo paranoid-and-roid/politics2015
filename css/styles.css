@@ -84,12 +84,11 @@ a {
 }
 
 #scores {
-    visibility: hidden;
     text-align: center;
     width: 80%;
     float: left;
 }
-#main {
+#main {  /* check if this still exists */
     display: none;
     width: 73%;
     float: left;
@@ -197,7 +196,6 @@ th, td {
 }
 
 #centre {
-    display: none;
     width: 55%;
     float: left;
     margin: 40px 50px;

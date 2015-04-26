@@ -1,52 +1,15 @@
 <div id = "game_sidebar">
    	<img src = "images/ballot_box.jpg" /> 
-		 <div id = "scores">
-			 <p>Seconds Remaining:</p>
-			 <div id = "countDown"></div>
-			 <p>Your Score:</p>
-			 <div id = "keepScore">{{ score }}</div>
-		 </div>
-   </div>
+</div>
     
-    <div id = "intro">
+<div id = "intro">
  
-		<p>
+	<p>
 		See if you can remember the details from the list of politicians.
 		Simply click the "Start" button below,and you have 60 seconds
 		to identify the correct constituency and political party for
 		each of the names and faces you see.
-		</p>
-		
-        <div id = "click" ng-click="playGame()">Start</div>
-     </div>
+	</p>
 
-        <table id = "scoreTable">
-            <tr>
-                <th>Ranking</th>
-                <th>Your Name</th>
-                <th>Your Score</th>
-                <th>Date Achieved</th>
-            </tr>
-        </table>
-
-        <div id = "centre">
-
-            <p>Select a constituency and a political party for each TD, and press the Submit button.</p>
-
-            <div id = "image"><img ng-src = "{{ face }}" alt = "{{ name }}" /></div>
-            <div id = "tdName"><p>{{ name }}</p></div><br>
-
-            <select id = "cons" ng-model="selectedConstituency" ng-options="constituency.constituency_name for constituency in constituencies">
-                <option value="">-- Constituency --</option>
-            </select>
-
-            <select id = "parties" ng-model="selectedParty" ng-options="">
-                <option>Political Parties</option>
-                <option>Fianna Fail</option>
-                <option>Fine Gael</option>
-                <option>Labour</option>
-                <option>Sinn Fein</option>
-            </select>
-
-            <div id = "submit" ng-click="choice()">Submit</div>
-        </div>
+	<div id = "click"><a ui-sref="play">Start</a></div>
+</div>
