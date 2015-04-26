@@ -107,10 +107,6 @@ playGame = function() {
     chooseRandom();
     
     //This is the end of the game
-	};
-	$scope.$on('$viewContentLoaded', function() {
-	    playGame();
-	});
-  });
-	 
+	}();
+  });	 
 }]);

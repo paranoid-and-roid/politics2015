@@ -73,7 +73,7 @@ a {
 #sidebar, #game_sidebar {
     float: left;
     width: 25%;
-    margin-top: 15px;
+    padding-bottom: 40px;
 }
 #game_sidebar {
     padding-left: 40px;
@@ -88,25 +88,7 @@ a {
     width: 80%;
     float: left;
 }
-#main {  /* check if this still exists */
-    display: none;
-    width: 73%;
-    float: left;
-    margin: 20px auto;
-}
-/*
-dl {
-    margin-top: 40px;
-}
-dt, dd {
-    padding: 10px;
-    font-size: 20px;
-}
 
-dt strong{
-    font-size: 40px;
-}
-*/
 #list {
     width: 80%;
     text-align: center;
@@ -166,17 +148,17 @@ img {
     font-size: 20px;
 }
 
-#click {
+#submit {
     width: 10%;
-    margin: auto;
+    margin: 20px auto 0;
     padding: 10px;
     background: #047;
     color: #fff;
     border-radius: 5px;
-    cursor: pointer;
     text-align: center;
+    cursor: pointer;
+    display: block;
 }
-
 #scoreTable {
     display: none;
     text-align: center;
@@ -229,31 +211,16 @@ th, td {
     margin: 5px 0;
     color: #114;
 }
-#intro p, #main p {
+#intro p {
     font-size: 20px;
     text-align: center;
     font-family: Calibri, "Times New Roman", sans-serif;
     padding: 0 10%;
 }
 
-#main {
-	width: 100%;
-	margin-top: 0;
-}
 .upper_image {
     width: 300px;
     margin: 20px 30px 20px 50px;
-}
-
-#submit {
-    width: 10%;
-    margin: 20px auto 0;
-    padding: 10px;
-    background: #047;
-    color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
 }
 
 #form {

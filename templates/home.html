@@ -1,5 +1,5 @@
 <div id = "sidebar">	
-	<ul id = "list" ng-click="hideMain()">
+	<ul id = "list">
 		<li id = "displayAll"><a ui-sref="home.all_constituencies">See all TDs</a></li>		
 		<li id = "displayAll" ng-repeat="constituency in constituencies"><a ui-sref="home.detail({constituencyName: constituency.constituency_name})">{{ constituency.constituency_name }}</a></li>
 	</ul>
