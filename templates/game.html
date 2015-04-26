@@ -4,7 +4,7 @@
 			 <p>Seconds Remaining:</p>
 			 <div id = "countDown"></div>
 			 <p>Your Score:</p>
-			 <div id = "keepScore"></div>
+			 <div id = "keepScore">{{ score }}</div>
 		 </div>
    </div>
     
@@ -33,14 +33,14 @@
 
             <p>Select a constituency and a political party for each TD, and press the Submit button.</p>
 
-            <div id = "image"><img id = "mugShot" ng-src = "{{ face }}" alt = "{{ name }}" /></div>
+            <div id = "image"><img ng-src = "{{ face }}" alt = "{{ name }}" /></div>
             <div id = "tdName"><p>{{ name }}</p></div><br>
 
-            <select id = "cons" ng-model="selectedItem" ng-options="constituency.constituency_name for constituency in constituencies">
+            <select id = "cons" ng-model="selectedConstituency" ng-options="constituency.constituency_name for constituency in constituencies">
                 <option value="">-- Constituency --</option>
             </select>
 
-            <select id = "parties">
+            <select id = "parties" ng-model="selectedParty" ng-options="">
                 <option>Political Parties</option>
                 <option>Fianna Fail</option>
                 <option>Fine Gael</option>

@@ -25,10 +25,10 @@ politicsApp
 	PoliticsService.list(function(response) {
 		$scope.constituencies = response;	
 
-var score = 0;
+$scope.score = 0;
 var seconds = 200;
 
-// $scope.selectedItem="-- Constituency --";
+
 
 $scope.playGame = function() {
     //The game begins with the appearance on the page of the central panel, which contains the image and the select boxes
@@ -74,18 +74,24 @@ $scope.playGame = function() {
     }
 
     var num1, num2;
-    //Randomly generate two numbers
     var chooseRandom = function() {
+    		//Randomly generate two numbers
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
      
+     		// Use the random numbers to generate a random politician
         $scope.face = $scope.constituencies[num1].details[num2].image;        
         $scope.name = $scope.constituencies[num1].details[num2].tdName;
+        
+       // $scope.party = $scope.constituencies[num1].details[num2].party;
     };
 
     var d, e;
     //This function checks that the option selected from each menu matches the correct details for each TD.
     $scope.choice = function() {
+    	
+    	$scope.selectedConstituency="-- Constituency --";
+    	$scope.selectedParty = "-- Party --";
     	
         var a = document.getElementById("parties").selectedIndex;
         var b = document.getElementById("cons").selectedIndex;
@@ -95,16 +101,14 @@ $scope.playGame = function() {
         f = d.getElementsByTagName("option")[b].text;
         //If the details are correct, the player scores points
         if(e == $scope.constituencies[num1].details[num2].party) {
-            score = score + (seconds / 2);
+            $scope.score = $scope.score + (seconds / 2);
         }
         
         if(f == $scope.constituencies[num1].constituency_name) {
-            score = score + (seconds / 2);
+            $scope.score = $scope.score + (seconds / 2);
         }
-        $("#keepScore").html(score); //The points are stored here.
         
         $("#parties").val("Political Parties");
-        $("#cons").val("Constituencies");
 
         chooseRandom();
 
@@ -113,5 +117,5 @@ $scope.playGame = function() {
     
     //This is the end of the game
 	};
-	});
+  });
 }]);
