@@ -26,7 +26,7 @@ politicsApp
 		$scope.constituencies = response;	
 
 $scope.score = 0;
-var seconds = 200;
+var seconds = 60;
 
 playGame = function() {
 
