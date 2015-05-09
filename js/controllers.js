@@ -14,9 +14,9 @@ politicsApp
 
 .controller('GameCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
 	PoliticsService.list(function(response) {
-		$scope.constituencies = response;
+		$scope.constituencies = response;	
 		
-		$scope.selectedParty = "-- Political Party --";	
+		$scope.selectedParty = "-- Political Party --";
 
 $scope.score = 0;
 var seconds = 200;
@@ -38,7 +38,7 @@ playGame = function() {
             $("#scoreTable").slideDown(); //The details of the game appear in a table which drops down.
             
             localStorage.name = name;
-            localStorage.score = score;
+            localStorage.$scope.score = score;
 
             //Below are the details contained in the score table.
             var currentDate = new Date();
@@ -61,34 +61,25 @@ playGame = function() {
 
     var num1, num2;
     var chooseRandom = function() {    	
-   
-    	
     	
     		//Randomly generate two numbers
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
      
-     		// Use the random numbers to generate a random politician
+     		// Use the random numbers to generate a random politician's image and name
         $scope.face = $scope.constituencies[num1].details[num2].image;        
         $scope.name = $scope.constituencies[num1].details[num2].tdName;
     };
 
-    var d, e;
     //This function checks that the option selected from each menu matches the correct details for each TD.
-    $scope.choice = function() {
-   
-        var a = document.getElementById("parties").selectedIndex;
-        var b = document.getElementById("cons").selectedIndex;
-        c = document.getElementById("parties");
-        d = document.getElementById("cons");
-        e = c.getElementsByTagName("option")[a].text;
-        f = d.getElementsByTagName("option")[b].text;
+    $scope.choice = function() {        
+        
         //If the details are correct, the player scores points
-        if(e == $scope.constituencies[num1].details[num2].party) {
+        if($("#parties option:selected").text() == $scope.constituencies[num1].details[num2].party) {
             $scope.score = $scope.score + (seconds / 2);
         }
         
-        if(f == $scope.constituencies[num1].constituency_name) {
+        if($("#cons option:selected").text() == $scope.constituencies[num1].constituency_name) {
             $scope.score = $scope.score + (seconds / 2);
         }
         
@@ -96,7 +87,6 @@ playGame = function() {
     	$scope.selectedParty = "-- Political Party --";
 
         chooseRandom();
-
     };
     chooseRandom();
     
