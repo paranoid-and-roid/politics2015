@@ -19,9 +19,9 @@ politicsApp
 		$scope.selectedParty = "-- Political Party --";
 
 $scope.score = 0;
-var seconds = 200;
+var score, seconds = 200;
 
-playGame = function() {
+var playGame = function() {
 
     var counter=setInterval(timer, 1000);
 
@@ -60,19 +60,29 @@ playGame = function() {
     }
 
     var num1, num2;
-    var chooseRandom = function() {    	
-    	
+    
+    //This function checks that the option selected from each menu matches the correct details for each TD.
+    $scope.chosenName= [];	
+    
+    var chooseRandom = function() { 
+    		
     		//Randomly generate two numbers
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
      
      		// Use the random numbers to generate a random politician's image and name
         $scope.face = $scope.constituencies[num1].details[num2].image;        
-        $scope.name = $scope.constituencies[num1].details[num2].tdName;
-    };
-
-    //This function checks that the option selected from each menu matches the correct details for each TD.
-    $scope.choice = function() {        
+        $scope.name = $scope.constituencies[num1].details[num2].tdName; 
+    };    
+    
+    $scope.choice = function() {    	
+    	
+        $scope.selectedConstituency="-- Constituency --";
+    	$scope.selectedParty = "-- Political Party --"; 
+    	
+    	// Once a TD has been selected, his/her name is added to the chosenName array        
+        $scope.chosenName.push($scope.name);
+        console.log($scope.chosenName);                   	     
         
         //If the details are correct, the player scores points
         if($("#parties option:selected").text() == $scope.constituencies[num1].details[num2].party) {
@@ -82,15 +92,16 @@ playGame = function() {
         if($("#cons option:selected").text() == $scope.constituencies[num1].constituency_name) {
             $scope.score = $scope.score + (seconds / 2);
         }
-        
-        $scope.selectedConstituency="-- Constituency --";
-    	$scope.selectedParty = "-- Political Party --";
-
-        chooseRandom();
+              
+        // The chooseRandom() function will only be called if the chosen name is not in the chosenName array.
+        for(var i=0;i<=$scope.chosenName.length;i++) {
+        	if($scope.name != $scope.chosenName[i]) {
+        		chooseRandom();
+        	}
+        }
     };
     chooseRandom();
-    
-    //This is the end of the game
+   
 	}();
   });	 
 }]);
