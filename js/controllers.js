@@ -1,14 +1,5 @@
 politicsApp
 
-.controller("MainController", ["$scope", function($scope) {
-	$scope.hideMain = function() {
-		$("#main").slideUp();
-	};
-	$scope.showMain = function() {
-		$("#main").slideDown();
-	};
-}])
-
 .controller('HomeCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
 	PoliticsService.list(function(response) {
 		$scope.constituencies = response;
@@ -23,10 +14,12 @@ politicsApp
 
 .controller('GameCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
 	PoliticsService.list(function(response) {
-		$scope.constituencies = response;	
+		$scope.constituencies = response;
+		
+		$scope.selectedParty = "-- Political Party --";	
 
 $scope.score = 0;
-var seconds = 60;
+var seconds = 200;
 
 playGame = function() {
 
@@ -67,7 +60,10 @@ playGame = function() {
     }
 
     var num1, num2;
-    var chooseRandom = function() {
+    var chooseRandom = function() {    	
+   
+    	
+    	
     		//Randomly generate two numbers
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
@@ -80,10 +76,7 @@ playGame = function() {
     var d, e;
     //This function checks that the option selected from each menu matches the correct details for each TD.
     $scope.choice = function() {
-    	
-    	$scope.selectedConstituency="-- Constituency --";
-    	$scope.selectedParty = "-- Political Party --";
-    	
+   
         var a = document.getElementById("parties").selectedIndex;
         var b = document.getElementById("cons").selectedIndex;
         c = document.getElementById("parties");
@@ -99,7 +92,8 @@ playGame = function() {
             $scope.score = $scope.score + (seconds / 2);
         }
         
-        $("#parties").val("Political Parties");
+        $scope.selectedConstituency="-- Constituency --";
+    	$scope.selectedParty = "-- Political Party --";
 
         chooseRandom();
 

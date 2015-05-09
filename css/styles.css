@@ -159,6 +159,7 @@ img {
     cursor: pointer;
     display: block;
 }
+
 #scoreTable {
     display: none;
     text-align: center;
