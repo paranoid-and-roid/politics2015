@@ -19,7 +19,7 @@ politicsApp
 		$scope.selectedParty = "-- Political Party --";
 
 $scope.score = 0;
-var score, seconds = 200;
+var score, seconds = 60;
 
 var playGame = function() {
 

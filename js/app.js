@@ -5,26 +5,7 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 	$urlRouterProvider.otherwise('/');
 	
 	$stateProvider
-		.state('home', {
-			abstract: true,		
-			templateUrl: 'templates/home.html',
-			controller: 'HomeCtrl'
-		})
-		.state('home.main', {
-			url: '/',
-			templateUrl: 'templates/home.main.html'			
-		})
-		.state('home.detail', {
-			url: '/{constituencyName}',
-			templateUrl: 'templates/home.detail.html',
-			controller: 'DetailCtrl'
-		})
-		.state('home.all_constituencies', {
-			url: '/all_constituencies',
-			templateUrl: 'templates/home.all.html',
-			controller: 'HomeCtrl'
-		})
-		.state('game', {
+	.state('game', {
 			url: '/game',
 			templateUrl: 'templates/game.html'
 		})
@@ -32,7 +13,24 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 			url: '/play',
 			templateUrl: 'templates/play.html',
 			controller: 'GameCtrl'
-		});
+		})
+		.state('home', {	
+			templateUrl: 'templates/home.html',
+			controller: 'HomeCtrl'
+		})
+		.state('home.main', {
+			url: '/',
+			templateUrl: 'templates/home.main.html'			
+		})
+		.state('home.all_constituencies', {
+			url: '/all_constituencies',
+			templateUrl: 'templates/home.all.html'
+		})
+		.state('home.detail', {
+			url: '/{constituencyName}',
+			templateUrl: 'templates/home.detail.html',
+			controller: 'DetailCtrl'
+		});		
 		
 		$locationProvider.html5Mode(true);
 }]);
