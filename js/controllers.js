@@ -12,52 +12,38 @@ politicsApp
 	});
 }])
 
-.controller('GameCtrl', ['$scope', 'PoliticsService', function($scope, PoliticsService) {
+.controller('GameCtrl', ['$scope', 'PoliticsService', '$rootScope', '$location', function($scope, PoliticsService, $rootScope, $location) {
 	PoliticsService.list(function(response) {
 		$scope.constituencies = response;	
 		
 		$scope.selectedParty = "-- Political Party --";
 
-$scope.score = 0;
-var score, seconds = 60;
+var score;
+var seconds = 3;
 
 var playGame = function() {
 
-    var counter=setInterval(timer, 1000);
-
-    function timer() {
+    var counter=setInterval(function timer() {
         //Once the button is pressed, the 60-second countdown begins, and the clock appears on the right side.
         
         seconds=seconds-1;
-        if (seconds <= 0){
-            clearInterval(counter);
-            var name = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.
-            
-            $("#centre").css("display", "none");
-            $("#scores").css("visibility", "hidden");
-            $("#scoreTable").slideDown(); //The details of the game appear in a table which drops down.
-            
-            localStorage.name = name;
-            localStorage.$scope.score = score;
-
-            //Below are the details contained in the score table.
-            var currentDate = new Date();
-            var dateTime = currentDate.getDate() + "-"
-                + (currentDate.getMonth()+1)  + "-"
-                + currentDate.getFullYear() + " at "
-                + currentDate.getHours() + "."
-                + currentDate.getMinutes();
-
-            var scoringTable = document.getElementById("scoreTable");
-            scoreRow = document.createElement("tr");
-            var newRow = scoringTable.appendChild(scoreRow);
-            newRow.innerHTML += "<td>"+""+"</td><td>"+localStorage.name+"</td><td>"+localStorage.score+"</td><td>"+dateTime+"</td>";
-            $("#keepScore").empty();
-            $("#countDown").empty();
-            return;
+        if (seconds <= 0){  
+        	
+        	 clearInterval(counter);   
+        	  
+        	 var name = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.          	    	
+        	    	
+		      $rootScope.$apply(function() {
+		        $location.path("/scoreboard");
+		        console.log($location.path());
+		      });         
+              
         }
-        $("#countDown").html(seconds);
-    }
+        
+        $("#countDown").html(seconds);         
+    },1000);
+
+    
 
     var num1, num2;
     
