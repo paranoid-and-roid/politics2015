@@ -5,7 +5,7 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 	$urlRouterProvider.otherwise('/');
 	
 	$stateProvider
-	.state('game', {
+		.state('game', {
 			url: '/game',
 			templateUrl: 'templates/game.html'
 		})

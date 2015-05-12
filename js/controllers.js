@@ -19,31 +19,11 @@ politicsApp
 		$scope.selectedParty = "-- Political Party --";
 
 var score;
-var seconds = 3;
+var seconds = 5;
+$scope.score;
+$scope.rank=0;
 
 var playGame = function() {
-
-    var counter=setInterval(function timer() {
-        //Once the button is pressed, the 60-second countdown begins, and the clock appears on the right side.
-        
-        seconds=seconds-1;
-        if (seconds <= 0){  
-        	
-        	 clearInterval(counter);   
-        	  
-        	 var name = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.          	    	
-        	    	
-		      $rootScope.$apply(function() {
-		        $location.path("/scoreboard");
-		        console.log($location.path());
-		      });         
-              
-        }
-        
-        $("#countDown").html(seconds);         
-    },1000);
-
-    
 
     var num1, num2;
     
@@ -87,6 +67,28 @@ var playGame = function() {
         }
     };
     chooseRandom();
+    
+        var counter=setInterval(function timer() {
+        //Once the button is pressed, the 60-second countdown begins, and the clock appears on the right side.
+        
+        seconds=seconds-1;
+        if (seconds <= 0){  
+        	
+        	 clearInterval(counter);   
+        	  
+        	 $scope.yourName = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.          	    	
+        	    	
+		      $rootScope.$apply(function() {
+		        $location.path("/scoreboard");
+		        console.log($location.path());
+		        $scope.rank++;
+		        $scope.score;
+		        $scope.date=moment(new Date()).format('DD/MM/YYYY h:mm a');
+		      });              
+        }
+        
+        $("#countDown").html(seconds);         
+    },1000);
    
 	}();
   });	 

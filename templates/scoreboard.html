@@ -1,8 +1,22 @@
-<table id = "scoreTable">
+<div  id = "scoreTable">
+
+<p>Nice work, {{ yourName }}! Your score of {{ score }} places you in position number {{ rank }}</p>
+	
+<button class="submit"><a ui-sref="play">Play Again</a></button>
+
+<table>	
     <tr>
         <th>Ranking</th>
         <th>Your Name</th>
         <th>Your Score</th>
         <th>Date Achieved</th>
     </tr>
+    <tr>
+        <td>{{ rank }}</td>
+        <td>{{ yourName }}</td>
+        <td>{{ score }}</td>
+        <td>{{ date }}</td>
+    </tr>
 </table>
+
+</div>
