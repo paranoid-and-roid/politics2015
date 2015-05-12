@@ -18,9 +18,8 @@ politicsApp
 		
 		$scope.selectedParty = "-- Political Party --";
 
-var score;
-var seconds = 5;
-$scope.score;
+var seconds = 15;
+$scope.score=0;
 $scope.rank=0;
 
 var playGame = function() {
@@ -48,7 +47,7 @@ var playGame = function() {
     	
     	// Once a TD has been selected, his/her name is added to the chosenName array        
         $scope.chosenName.push($scope.name);
-        console.log($scope.chosenName);                   	     
+       // console.log($scope.chosenName);                   	     
         
         //If the details are correct, the player scores points
         if($("#parties option:selected").text() == $scope.constituencies[num1].details[num2].party) {
