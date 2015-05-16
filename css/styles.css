@@ -145,7 +145,11 @@ img {
 }
 #tdName {
     text-align: center;
-    font-size: 20px;
+    font-size: 20px;    
+}
+
+#tdName p {
+	margin: 0;
 }
 
 .submit {
@@ -172,7 +176,7 @@ th, td {
 #centre {
     width: 55%;
     float: left;
-    margin: 40px 50px;
+    margin: 0 50px 50px;
     background: #fff;
     border: 2px solid #1f38c4;
     border-radius: 5px;

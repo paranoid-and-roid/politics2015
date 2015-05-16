@@ -1,8 +1,6 @@
 var politicsApp = angular.module('politicsApp', ['ui.router'])
 
-.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider) {	
-	
-	$urlRouterProvider.otherwise('/');
+.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {	
 	
 	$stateProvider
 		.state('home', {	
@@ -31,4 +29,6 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 			templateUrl: 'templates/play.html',
 			controller: 'GameCtrl'
 		});
+		
+		$urlRouterProvider.otherwise('/');
 }]);

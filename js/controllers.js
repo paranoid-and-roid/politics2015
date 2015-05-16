@@ -18,7 +18,7 @@ politicsApp
 		
 		$scope.selectedParty = "-- Political Party --";
 
-var seconds = 15;
+var seconds = 200;
 $scope.score=0;
 $scope.rank=0;
 
