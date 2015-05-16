@@ -5,18 +5,9 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 	$urlRouterProvider.otherwise('/');
 	
 	$stateProvider
-		.state('game', {
-			url: '/game',
-			templateUrl: 'templates/game.html'
-		})
-		.state('play', {
-			url: '/play',
-			templateUrl: 'templates/play.html',
-			controller: 'GameCtrl'
-		})
 		.state('home', {	
-			templateUrl: 'templates/home.html',
-			controller: 'HomeCtrl'
+		templateUrl: 'templates/home.html',
+		controller: 'HomeCtrl'
 		})
 		.state('home.main', {
 			url: '/',
@@ -30,7 +21,14 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 			url: '/{constituencyName}',
 			templateUrl: 'templates/home.detail.html',
 			controller: 'DetailCtrl'
-		});		
-		
-		$locationProvider.html5Mode(true);
+		})		
+		.state('game', {
+			url: '/game',
+			templateUrl: 'templates/game.html'
+		})
+		.state('play', {
+			url: '/play',
+			templateUrl: 'templates/play.html',
+			controller: 'GameCtrl'
+		});
 }]);
