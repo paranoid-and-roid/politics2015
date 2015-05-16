@@ -14,11 +14,6 @@ var politicsApp = angular.module('politicsApp', ['ui.router'])
 			templateUrl: 'templates/play.html',
 			controller: 'GameCtrl'
 		})
-		.state('scoreboard', {
-			url: '/scoreboard',
-			templateUrl: 'templates/scoreboard.html',
-			controller: 'GameCtrl'
-		})
 		.state('home', {	
 			templateUrl: 'templates/home.html',
 			controller: 'HomeCtrl'

@@ -220,6 +220,7 @@ th, td {
 }
 
 #scoreTable {
+	display:none;
     text-align: center;
     font-size: 20px;
     border-collapse: collapse;
@@ -234,15 +235,16 @@ th, td {
 #scoreTable th, #scoreTable td {
 	width: 25%;
 	padding: 10px 25px;
-	color: #fff;
 }
 
 #scoreTable th {
 	background: #047;
+	color: #ccf;
 }
 
 #scoreTable td {
 	background: #ccf;
+	color: #047;
 }
 
 footer {

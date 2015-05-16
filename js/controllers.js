@@ -29,16 +29,21 @@ var playGame = function() {
     //This function checks that the option selected from each menu matches the correct details for each TD.
     $scope.chosenName= [];	
     
-    var chooseRandom = function() { 
+    var chooseRandom = function() {
     		
     		//Randomly generate two numbers
         num1 = Math.floor(Math.random()*($scope.constituencies.length));
         num2 = Math.floor(Math.random()*($scope.constituencies[num1].details.length));
      
      		// Use the random numbers to generate a random politician's image and name
-        $scope.face = $scope.constituencies[num1].details[num2].image;        
-        $scope.name = $scope.constituencies[num1].details[num2].tdName; 
-    };    
+        var tdFace = $scope.constituencies[num1].details[num2].image;        
+        var tdName = $scope.constituencies[num1].details[num2].tdName; 
+                      
+        // The chooseRandom() function will only be called if the chosen name is not in the chosenName array.
+   
+        $scope.face = tdFace;
+        		$scope.name = tdName;      
+    };
     
     $scope.choice = function() {    	
     	
@@ -57,38 +62,33 @@ var playGame = function() {
         if($("#cons option:selected").text() == $scope.constituencies[num1].constituency_name) {
             $scope.score = $scope.score + (seconds / 2);
         }
-              
-        // The chooseRandom() function will only be called if the chosen name is not in the chosenName array.
-        for(var i=0;i<=$scope.chosenName.length;i++) {
-        	if($scope.name != $scope.chosenName[i]) {
-        		chooseRandom();
-        	}
-        }
-    };
-    chooseRandom();
+        chooseRandom();
+    };    
     
         var counter=setInterval(function timer() {
         //Once the button is pressed, the 60-second countdown begins, and the clock appears on the right side.
-        
+
         seconds=seconds-1;
-        if (seconds <= 0){  
-        	
-        	 clearInterval(counter);   
-        	  
-        	 $scope.yourName = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.          	    	
-        	    	
+        if (seconds <= 0){
+
+        	 clearInterval(counter);
+
+        	 $scope.yourName = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.
+        	 
+        	  $("#playGame").css("display", "none");
+        	 $("#scoreTable").slideDown();
+
 		      $rootScope.$apply(function() {
-		        $location.path("/scoreboard");
-		        console.log($location.path());
 		        $scope.rank++;
+		        $scope.yourName;
 		        $scope.score;
 		        $scope.date=moment(new Date()).format('DD/MM/YYYY h:mm a');
-		      });              
+		      });
         }
-        
-        $("#countDown").html(seconds);         
+
+        $("#countDown").html(seconds);
     },1000);
-   
+		chooseRandom();
 	}();
   });	 
 }]);
