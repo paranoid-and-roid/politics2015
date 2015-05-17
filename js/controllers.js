@@ -18,7 +18,7 @@ politicsApp
 		
 		$scope.selectedParty = "-- Political Party --";
 
-var seconds = 200;
+var seconds = 60;
 $scope.score=0;
 $scope.rank=0;
 
@@ -27,7 +27,7 @@ var playGame = function() {
     var num1, num2;
     
     //This function checks that the option selected from each menu matches the correct details for each TD.
-    $scope.chosenName= [];	
+    $scope.chosenName = ["blank"];	
     
     var chooseRandom = function() {
     		
@@ -40,20 +40,25 @@ var playGame = function() {
         var tdName = $scope.constituencies[num1].details[num2].tdName; 
                       
         // The chooseRandom() function will only be called if the chosen name is not in the chosenName array.
-   
-        $scope.face = tdFace;
-        		$scope.name = tdName;      
+   		for(var i=0;i<$scope.chosenName.length;i++) {
+   			if(tdName != $scope.chosenName[i]) {
+   				$scope.face = tdFace;
+   				$scope.name = tdName;
+   			} else {
+   				console.log(tdName);
+   				chooseRandom();
+   			}
+   		} 
+        // Once a TD has been selected, his/her name is added to the chosenName array  
+          $scope.chosenName.push($scope.name);
+          console.log($scope.chosenName);   
     };
     
     $scope.choice = function() {    	
     	
         $scope.selectedConstituency="-- Constituency --";
-    	$scope.selectedParty = "-- Political Party --"; 
-    	
-    	// Once a TD has been selected, his/her name is added to the chosenName array        
-        $scope.chosenName.push($scope.name);
-       // console.log($scope.chosenName);                   	     
-        
+      	$scope.selectedParty = "-- Political Party --"; 
+
         //If the details are correct, the player scores points
         if($("#parties option:selected").text() == $scope.constituencies[num1].details[num2].party) {
             $scope.score = $scope.score + (seconds / 2);
@@ -62,6 +67,7 @@ var playGame = function() {
         if($("#cons option:selected").text() == $scope.constituencies[num1].constituency_name) {
             $scope.score = $scope.score + (seconds / 2);
         }
+
         chooseRandom();
     };    
     
