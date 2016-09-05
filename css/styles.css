@@ -23,7 +23,7 @@ header {
     margin-bottom: 40px;
 }
 
-h2, h3 {
+h2, h3, h4 {
 	font-size: 200%;
     text-align: center;
 }
@@ -31,7 +31,6 @@ h2, h3 {
 h2 {
 	padding-top: 20px;
 }
-
 li {
     list-style: none;
 }
@@ -114,8 +113,8 @@ a {
     padding-top: 0;
 }
 
-fieldset {
-	margin: 10px 0 80px;
+.fieldset {
+	/*margin: 10px 0 80px;*/
 	background: #f2eaff;
 	border: 0;
 	border-radius: 4px;

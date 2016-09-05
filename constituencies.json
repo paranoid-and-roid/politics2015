@@ -1,154 +1,147 @@
 [
     {"constituency_name": "Cork East",
         "details": [
-            {
-                "tdName": "Sean Sherlock",
-                "image": "images/sherlock.jpg",
-                "party": "Labour",
-                "firstCount": "11862",
-                "whenElected": "Count 1"
-            },
-            {
-                "tdName": "David Stanton",
-                "image": "images/stanton.png",
-                "party": "Fine Gael",
-                "firstCount": "10019",
-                "whenElected": "Count 5"
-            },
-            {
-                "tdName": "Tom Barry",
-                "image": "images/barry.png",
-                "party": "Fine Gael",
-                "firstCount": "5798",
-                "whenElected": "Count 7"
-            },
-            {
-                "tdName": "Sandra McLellan",
-                "image": "images/mclellan.jpg",
-                "party": "Sinn Fein",
-                "firstCount": "6292",
-                "whenElected": "Count 7"
-            }
+		    {
+		        "tdName": "Kevin O'Keeffe",
+		        "image": "images/okeeffe.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "8264",
+		        "whenElected": "count 9"
+		    },
+			{
+		        "tdName": "David Stanton",
+		        "image": "images/stanton.png",
+		        "party": "Fine Gael",
+		        "firstCount": "7171",
+		        "whenElected": "count 9"
+		    },
+		    {	
+		        "tdName": "Sean Sherlock",
+		        "image": "images/sherlock.jpg",
+		        "party": "Labour",
+		        "firstCount": "6949",
+		        "whenElected": "count 9"
+		    },      
+		    {	
+		        "tdName": "Pat Buckley",
+		        "image": "images/buckley.png",
+		        "party": "Sinn Fein",
+		        "firstCount": "5358",
+		        "whenElected": "count 10"
+			}
         ]
     },
     {"constituency_name": "Cork North Central",
         "details": [
-            {
-                "tdName": "Jonathon O'Brien",
-                "image": "images/obrien.jpg",
-                "party": "Sinn Fein",
-                "firstCount": "7923",
-                "whenElected": "Count 8"
-            },
-            {
-                "tdName": "Kathleen Lynch",
-                "image": "images/klynch.jpg",
-                "party": "Labour",
-                "firstCount": "7676",
-                "whenElected": "Count 10"
-            },
-            {
-                "tdName": "Billy Kelleher",
-                "image": "images/kelleher.jpg",
-                "party": "Fianna Fail",
-                "firstCount": "7896",
-                "whenElected": "Count 11"
-            },
-            {
-                "tdName": "Dara Murphy",
-                "image": "images/murphy.png",
-                "party": "Fine Gael",
-                "firstCount": "6597",
-                "whenElected": "Count 11"
-            }
+	        {	
+		        "tdName": "Billy Kelleher",
+		        "image": "images/kelleher.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "14286",
+		        "whenElected": "count 1"
+		    },
+		    {	
+		        "tdName": "Mick Barry",
+		        "image": "images/barry.jpg",
+		        "party": "Anti-Austerity Alliance",
+		        "firstCount": "8041",
+		        "whenElected": "count 7"
+		    },
+		    {	
+		        "tdName": "Jonathon O'Brien",
+		        "image": "images/obrien.jpg",
+		        "party": "Sinn Fein",
+		        "firstCount": "6231",
+		        "whenElected": "count 8"
+		    },
+		    {	
+		        "tdName": "Dara Murphy",
+		        "image": "images/murphy.png",
+		        "party": "Fine Gael",
+		        "firstCount": "5264",
+		        "whenElected": "count 11"
+		    }
         ]
     },
     {"constituency_name": "Cork North West",
         "details": [
-            {
-                "tdName": "Michael Creed",
-                "image": "images/creed.png",
-                "party": "Fine Gael",
-                "firstCount": "10112",
-                "whenElected": "Count 5"
-            },
-            {
-                "tdName": "Michael Moynihan",
-                "image": "images/moynihan.jpg",
-                "party": "Fianna Fail",
-                "firstCount": "8845",
-                "whenElected": "Count 6"
-            },
-            {
-                "tdName": "Aine Collins",
-                "image": "images/collins.png",
-                "party": "Fine Gael",
-                "firstCount": "7884",
-                "whenElected": "Count 6"
-            }
+		    {	
+		        "tdName": "Michael Creed",
+		        "image": "images/creed.png",
+		        "party": "Fine Gael",
+		        "firstCount": "8869",
+		        "whenElected": "count 8"
+		    },
+		    {	
+		        "tdName": "Aindreas Moynihan",
+		        "image": "images/moynihan_a.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "8924",
+		        "whenElected": "count 9"
+		    },
+		    {	
+		        "tdName": "Michael Moynihan",
+		        "image": "images/moynihan_m.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "7332",
+		        "whenElected": "count 9"
+		    }
         ]
     },
     {"constituency_name": "Cork South Central",
         "details": [
-            {
-                "tdName": "Micheal Martin",
-                "image": "images/martin.jpg",
-                "party": "Fianna Fail",
-                "firstCount": "10715",
-                "whenElected": "Count 1"
-            },
-            {
-                "tdName": "Ciaran Lynch",
-                "image": "images/clynch.jpg",
-                "party": "Labour",
-                "firstCount": "8481",
-                "whenElected": "Count 9"
-            },
-            {
-                "tdName": "Simon Coveney",
-                "image": "images/coveney.png",
-                "party": "Fine Gael",
-                "firstCount": "9447",
-                "whenElected": "Count 10"
-            },
-            {
-                "tdName": "Jerry Buttimer",
-                "image": "images/buttimer.png",
-                "party": "Fine Gael",
-                "firstCount": "7128",
-                "whenElected": "Count 11"
-            },
-            {
-                "tdName": "Michael McGrath",
-                "image": "images/mcgrath.jpg",
-                "party": "Fianna Fail",
-                "firstCount": "7221",
-                "whenElected": "Count 12"
-            }
+	        {	
+		        "tdName": "Michael McGrath",
+		        "image": "images/mcgrath.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "11795",
+		        "whenElected": "count 1"
+		    },
+		    {	
+		        "tdName": "Micheal Martin",
+		        "image": "images/martin.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "11346",
+		        "whenElected": "count 1"
+		    },
+		    {	
+		        "tdName": "Simon Coveney",
+		        "image": "images/coveney.png",
+		        "party": "Fine Gael",
+		        "firstCount": "7965",
+		        "whenElected": "count 11"
+		    },
+		    {	
+		        "tdName": "Donnchadh Ó Laoghaire",
+		        "image": "images/olaoghaire.png",
+		        "party": "Sinn Fein",
+		        "firstCount": "6986",
+		        "whenElected": "count 11"
+		    }
         ]
     },
     {"constituency_name": "Cork South West",
         "details": [
-            {
-                "tdName": "Jim Daly",
-                "image": "images/daly.png",
-                "party": "Fine Gael",
-                "firstCount": "8878",
-                "whenElected": "Count 5"
-            },
-            {
-                "tdName": "Noel Harrington",
-                "image": "images/harrington.png",
-                "party": "Fine Gael",
-                "firstCount": "6898",
-                "whenElected": "Count 6"
-            },
-            {
-                "tdName": "Michael McCarthy",
-                "image": "images/mccarthy.jpg",
-                "party": "Labour",
-                "firstCount": "6533",
-                "whenElected": "Count 6"
-            }
+	        {	
+		        "tdName": "Margaret Murphy O'Mahony",
+		        "image": "images/omahony.jpg",
+		        "party": "Fianna Fail",
+		        "firstCount": "8482",
+		        "whenElected": "count 5"
+		    },
+		    {	
+		        "tdName": "Jim Daly",
+		        "image": "images/daly.png",
+		        "party": "Fine Gael",
+		        "firstCount": "7370",
+		        "whenElected": "count 5"
+		    },
+		    {	
+		        "tdName": "Michael Collins",
+		        "image": "images/collins.png",
+		        "party": "Independent",
+		        "firstCount": "6765",
+		        "whenElected": "count 5"
+		    }
         ]
     }]

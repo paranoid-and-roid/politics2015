@@ -56,7 +56,7 @@ var playGame = function() {
     
     $scope.choice = function() {    	
     	
-        $scope.selectedConstituency="-- Constituency --";
+        $scope.selectedConstituency= "-- Constituency --";
       	$scope.selectedParty = "-- Political Party --"; 
 
         //If the details are correct, the player scores points
@@ -81,7 +81,7 @@ var playGame = function() {
 
         	 $scope.yourName = prompt("Please enter your name", " "); //The game ends with the appearance of a prompt box.
         	 
-        	  $("#playGame").css("display", "none");
+        	 $("#playGame").css("display", "none");
         	 $("#scoreTable").slideDown();
 
 		      $rootScope.$apply(function() {
